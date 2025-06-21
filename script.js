@@ -5,18 +5,17 @@ function Person(name, age) {
 		this.age=age;
 	}
 	greet(){
-		return `Hello, my name is ${name}, I am ${age} years old.`;
+		return `Hello, my name is ${this.name}, I am ${this.age} years old.`;
 	}
 }
 
 function Employee(name, age, jobTitle) extends Person{
 	constructor(name,age,jobTitle){
-		this.name=name;
-		this.age=age;
+		super(name,age);
 		this.jobTitle=jobTitle;
 	}
 	jobGreet(){
-		return `Hello, my name is ${name}, I am ${age} years old, and my job title is ${jobTitle}.`
+		return `Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${jobTitle}.`
 	}
 }
 
